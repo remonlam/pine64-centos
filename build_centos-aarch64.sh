@@ -1,6 +1,6 @@
 ## Variables
-sd_boot=/dev/sdb1
-sd_root=/dev/sdb2
+sd_boot=/dev/sda1
+sd_root=/dev/sda2
 rootfs=/tmp/centos7_aarch64_build
 
 ## Create building directories based on variables
@@ -20,18 +20,24 @@ mkdir -p $rootfs/boot
 ## Copy rootfs to building dir
 echo "Downloading rootfs, this could take some minutes to complete"
 tar --numeric-owner -xpJf $rootfs/CentOS-7-aarch64-rootfs-1606.tar.xz -C $rootfs/root
+tar -zxvf /root/git/pine64-centos/sources/modules.tar.gz -C /tmp/centos7_aarch64_build/root/lib/
+tar -zxvf /root/git/pine64-centos/sources/firmware.tar.gz -C /tmp/centos7_aarch64_build/root/lib/
 
 ## run blkid to get the ID of /root & /boot
 ## example; UID=438aec14-85cd-470b-91bc-7afc9700037b  /  ext4  defaults  0 0
 fstab_boot=$(blkid /dev/$sd_boot | tee /dev/tty)
 fstab_root=$(blkid /dev/$sd_root | tee /dev/tty)
+echo $fstab_boot
+echo $fstab_root
+echo ""
+echo ""
 
-echo "########################################"
+echo "#########################################"
 echo "Use this information to update the fstab"
 echo $fstab_boot
 echo $fstab_root
 echo "nano /$rootfs/root/etc/fstab"
-echo "########################################"
+echo "#########################################"
 
 ## change the uuid in fstab (will automate this later on)
 #nano $rootfs/root/etc/fstab
