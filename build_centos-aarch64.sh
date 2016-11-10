@@ -8,9 +8,9 @@ mkdir -p $rootfs/root
 mkdir -p $rootfs/boot
 
 ## Download latest centos7 aarch64 image
-curl -sSL -o $rootfs/CentOS-7-aarch64-rootfs-1606.tar.xz http://mirror.centos.org/altarch/7/isos/aarch64/CentOS-7-aarch64-rootfs-1606.tar.xz
-#curl -sSL -0 $rootfs/firmware.tar.gz https://github.com/remonlam/pine64-fedora/raw/master/sources/firmware.tar.gz
-#curl -sSL -0 $rootfs/modules.tar.gz https://github.com/remonlam/pine64-centos/raw/master/sources/modules.tar.gz
+#curl -sSL -o $rootfs/CentOS-7-aarch64-rootfs-1606.tar.xz http://mirror.centos.org/altarch/7/isos/aarch64/CentOS-7-aarch64-rootfs-1606.tar.xz
+###curl -sSL -0 $rootfs/firmware.tar.gz https://github.com/remonlam/pine64-fedora/raw/master/sources/firmware.tar.gz
+###curl -sSL -0 $rootfs/modules.tar.gz https://github.com/remonlam/pine64-centos/raw/master/sources/modules.tar.gz
 
 # make sure that the following folders are re-populated with the tar.gz files
 # /boot
