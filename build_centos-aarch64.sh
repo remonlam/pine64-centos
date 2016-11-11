@@ -10,8 +10,8 @@
 
 # Run functions
 functionRootCheck
-#functionFormatDisk
-#functionDownloadSources
+functionFormatDisk
+functionDownloadSources
 #test
 functionExtractImage
 #
