@@ -10,6 +10,6 @@
 
 # Run functions
 functionRootCheck
-functionFormatDisk
+#functionFormatDisk
 functionDownloadSources
 test
