@@ -11,3 +11,4 @@
 # Run functions
 functionRootCheck
 functionFormatDisk
+functionDownloadSources
