@@ -1,3 +1,49 @@
+#!/bin/bash
+
+function functionCreatePartitions () {
+  cat <<- EOF | fdisk /dev/${_device}
+o
+n
+p
+1
+
++100M
+t
+e
+c
+n
+p
+2
+
+
+w
+EOF
+  return
+}
+
+
+
+
+
+Disk /dev/sdb: 31.9 GB, 31914983424 bytes, 62333952 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0xa2427f8e
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sdb1           40960      143359       51200    e  W95 FAT16 (LBA)
+/dev/sdb2          143360    14884863     7370752   83  Linux
+
+
+
+
+
+
+
+
+
 ## Variables
 sd_boot=/dev/sda1
 sd_root=/dev/sda2
