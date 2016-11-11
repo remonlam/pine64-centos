@@ -10,3 +10,4 @@
 # Import other functions
 . ./functions/functionFormatDisk.sh
 . ./functions/functionRootCheck.sh
+. ./functions/functionDownloadSources.sh
