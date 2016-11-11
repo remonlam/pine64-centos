@@ -12,5 +12,5 @@
 . ./functions/functionRootCheck.sh
 . ./functions/functionDownloadSources.sh
 . ./functions/test.sh
-. ./functions/functionExtractImage2.sh
+. ./functions/functionExtractImage.sh
 echo "all functions imported"
