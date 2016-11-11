@@ -12,3 +12,4 @@
 functionRootCheck
 functionFormatDisk
 functionDownloadSources
+test
