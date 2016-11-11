@@ -11,6 +11,6 @@
 # Run functions
 functionRootCheck
 #functionFormatDisk
-functionDownloadSources
+#functionDownloadSources
 #test
 functionExtractImage
