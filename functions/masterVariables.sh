@@ -4,8 +4,8 @@
 # Set fixed variables, need to move this part to function
 part1=1
 part2=2
-sd_boot=/dev/sda1
-sd_root=/dev/sda2
+sd_boot=/dev/sdb1
+sd_root=/dev/sdb2
 
 # Set fixed variables for mounting sd card
 mount_boot=/tmp/boot
