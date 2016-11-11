@@ -70,7 +70,7 @@ function functionFormatDisk {
   {
     sleep 5
     mkfs.vfat /dev/$sdCard$part1
-    mkdir -p /temp/boot # make a variable of this mountpint $mount_boot
+    mkdir -p $rootfs/boot # make a variable of this mountpint $mount_boot
     mount /dev/$sdCard$part1 $rootfs/boot
   } &> /dev/null
   echo ""
@@ -78,7 +78,7 @@ function functionFormatDisk {
   echo "Create and mount the ext4 filesystem on '$sdCard$part2'"
   {
     mkfs -t ext4 /dev/$sdCard$part2
-    mkdir -p /temp/root
+    mkdir -p $rootfs/root
     mount /dev/$sdCard$part2 $rootfs/root # make a variable of this mountpint $mount_root
   } &> /dev/null
   echo "#########################################################################"
