@@ -12,4 +12,5 @@
 functionRootCheck
 #functionFormatDisk
 functionDownloadSources
-test
+#test
+functionExtractImage

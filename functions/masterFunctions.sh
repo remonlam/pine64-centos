@@ -12,3 +12,4 @@
 . ./functions/functionRootCheck.sh
 . ./functions/functionDownloadSources.sh
 . ./functions/test.sh
+. ./functions/functionExtractImage.sh
