@@ -40,7 +40,7 @@ function functionFormatDisk {
        parted -s /dev/$sdCard rm ${partition}
     done
   {
-    dd if=/dev/zero of=/dev/$sdCard bs=105M count=1
+    dd if=/dev/zero of=/dev/$sdCard bs=150M count=1
   } &> /dev/null
   echo "Device '$sdCard' has been successfully partitioned"
   echo "####################################################################################"
