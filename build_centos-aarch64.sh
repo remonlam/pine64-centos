@@ -10,3 +10,4 @@
 
 # Run functions
 functionRootCheck
+functionFormatDisk
