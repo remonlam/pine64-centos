@@ -13,4 +13,5 @@
 . ./functions/functionDownloadSources.sh
 . ./functions/test.sh
 . ./functions/functionExtractImage.sh
+. ./functions/functionCreateFstab.sh
 echo "all functions imported"

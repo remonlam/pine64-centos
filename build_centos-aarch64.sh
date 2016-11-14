@@ -14,4 +14,5 @@ functionFormatDisk
 functionDownloadSources
 #test
 functionExtractImage
+functionCreateFstab
 #
