@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## This function will check if the script is running as "root",
+## If it's not running as root the script will exit;
+
 function functionRootCheck {
 echo "#########################################################################"
 echo "THIS SCRIPT NEEDS TO BE RUN AS ROOT, CHECKING..."
