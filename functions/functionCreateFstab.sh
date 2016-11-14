@@ -24,7 +24,7 @@ echo "UUID='$fstab_root' TYPE=ext4 / ext4 defaults 0 0" >> $rootfs/root/etc/fsta
 echo ""
 echo ""
 echo "Please check fstab for errors"
-cat $rootfs/root/ect/fstab
+cat $rootfs/root/etc/fstab
 echo "#########################################"
 
 # example of fstab with a new boot and root
