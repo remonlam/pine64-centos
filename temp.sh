@@ -20,8 +20,10 @@ tar -zxvf /root/git/pine64-centos/sources/firmware.tar.gz -C /tmp/centos7_aarch6
 
 ## run blkid to get the ID of /root & /boot
 ## example; UID=438aec14-85cd-470b-91bc-7afc9700037b  /  ext4  defaults  0 0
-fstab_boot=$(blkid /dev/$sd_boot | tee /dev/tty)
-fstab_root=$(blkid /dev/$sd_root | tee /dev/tty)
+#fstab_boot=$(blkid /dev/$sd_boot | tee /dev/tty) # not needed anymore
+fstab_boot=$(blkid | sed -n '/'$sd_boot'/s/.*UUID=\"\([^\"]*\)\".*/\1/p')
+#fstab_root=$(blkid /dev/$sd_root | tee /dev/tty) # not needed anymore
+fstab_root=$(blkid | sed -n '/'$sd_root'/s/.*UUID=\"\([^\"]*\)\".*/\1/p')
 echo $fstab_boot
 echo $fstab_root
 echo ""
